@@ -1,0 +1,20 @@
+<div class="banner"><h5><%= link_to "Add restaurant", new_restaurant_path %></h3></div>
+
+<% @restaurants.each do |restaurant| %>
+  <div class="restaurant-card">
+    <p>
+      <strong><%= link_to restaurant.name, restaurant_path(restaurant) %> </strong>
+    </p>
+     <p>
+      <%= restaurant.address %>
+    </p>
+     <p>
+      <%= restaurant.phone_number %>
+    </p>
+     <p>
+      <em><%= restaurant.category %></em>
+    </p>
+  </div>
+  <br>
+  <br>
+<% end %>
